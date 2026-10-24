@@ -4,7 +4,16 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    name = "Yogesh"
+    course = "Python Flask"
+    city = "Indore"
+    age:22
+
+    return render_template("index.html",
+                           name=name,
+                           course=course,
+                           city=city,
+                           age=22)
 
 
 
