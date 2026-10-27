@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Document</title>
-</head>
-<body>
-    <h1>Welcome, my courses are: </h1>
-    <ol>
-    {% for course in courses%}
-    <h2>
-    <li>
-    {{course}}
-    </li>
-    </h2>
-    {% endfor %}
-    </ol>
-</body>
-    
-</html>
+{% extends "base.html" %}
+{% block content %}
+<h2>Welcome to Flask Course</h2>
+<p>This is Home Page</p>
+{% endblock %}
