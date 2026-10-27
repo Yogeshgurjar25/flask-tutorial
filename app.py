@@ -1,21 +1,25 @@
-from flask import Flask, render_template
+from flask import Flask,render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    name = "Yogesh"
-    course = "Python Flask"
-    city = "Indore"
-    age:22
+    first_name = "Rohit"
+    last_name = "Kumar"
+    city = "Delhi"
+    price=500
+    course= [
+        "python",
+        "Flask",
+        "Django",
+        "FastApi"
+    ]
+    return render_template("index.html", 
+                        first_name=first_name,
+                        last_name = last_name,
+                        course=course,
+                        city=city,
+                        price=price)
 
-    return render_template("index.html",
-                           name=name,
-                           course=course,
-                           city=city,
-                           age=22)
-
-
-
-if __name__ == '__main__':
-    app.run(debug = True)
+if __name__ == "__main__":
+    app.run(debug=True)
